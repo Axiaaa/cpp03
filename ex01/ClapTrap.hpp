@@ -17,6 +17,7 @@ class ClapTrap {
         unsigned int attackDamage;
 
     public :
+        ClapTrap();
         ClapTrap(string name);
         ~ClapTrap();
         ClapTrap(const ClapTrap& clapTrap);

@@ -8,6 +8,7 @@
 class ScavTrap : public ClapTrap
 {
     public :
+        ScavTrap();
         ScavTrap(string name);
         ~ScavTrap();
         ScavTrap(const ScavTrap& scavTrap);

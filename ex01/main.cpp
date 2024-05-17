@@ -26,12 +26,10 @@ int main() {
     }
 
     while (clapTrap.getHitPoints() > 0) {
-        std::cout << clapTrap.getHitPoints() << "\n";
         clapTrap.takeDamage(1);
     }
 
     while (clapTrap.getEnergyPoint() > 0) {
-        std::cout << clapTrap.getEnergyPoint() << "\n";
         clapTrap.attack("Enemy");
     }
     return 0;

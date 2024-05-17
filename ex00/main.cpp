@@ -2,9 +2,9 @@
 
 int main() {
 
-    ClapTrap clap("Emy");
+    ClapTrap clap("ClapTrap");
 
-    for (int i = 0; i < 120; i++)
+    for (int i = 0; i < 100; i++)
     {
         clap.attack("Lucie");
         clap.beRepaired(1);

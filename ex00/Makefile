@@ -1,21 +1,23 @@
-NAME 	= Claptrap
-CC 		= g++
-FLAGS	= -Wall -Wextra -Werror -std=c++98
-SRCS	= main.cpp Claptrap.cpp
+NAME = ClapTrap
+CC = g++
+FLAGS = -Wall -Wextra -Werror -std=c++98
+SRCS = main.cpp ClapTrap.cpp
+OBJS = $(SRCS:.cpp=.o)
 
+all: $(NAME)
 
-$(NAME) : all
+$(NAME): $(OBJS)
+	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 
-all :
-	g++ $(FLAGS) $(OBJS) $(NAME)
+%.o: %.cpp
+	$(CC) $(FLAGS) -c $< -o $@
 
+clean:
+	rm -f $(OBJS)
 
-clean : 
-	rm -rf $(OBS)
+fclean: clean
+	rm -f $(NAME)
 
-fclean : clean
-	rm -rf $(NAME)
+re: fclean all 
 
-re : fclean all
-
-.PHONY : re fclean clean all
+.PHONY: all clean fclean re

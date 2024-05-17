@@ -7,6 +7,13 @@ ScavTrap::ScavTrap(string name) : ClapTrap(name) {
     std::cout << "ScavTrap " << this->getName() << " is created" << std::endl;
 }
 
+ScavTrap::ScavTrap() : ClapTrap("Default") {
+    this->setHitPoints(100);
+    this->setEnergyPoint(50);
+    this->setAttackDamage(20);
+    std::cout << "Default ScavTrap " << this->getName() << " is created" << std::endl;
+}
+
 ScavTrap::~ScavTrap() {
     std::cout << "ScavTrap " << this->getName() << " is destroyed" << std::endl;
 }

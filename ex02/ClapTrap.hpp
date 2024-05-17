@@ -16,6 +16,7 @@ class ClapTrap {
 
     public :
         ClapTrap(string name);
+        ClapTrap();
         ~ClapTrap();
         ClapTrap(const ClapTrap& clapTrap);
         ClapTrap& operator=(const ClapTrap& clapTrap);

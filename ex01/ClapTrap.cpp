@@ -8,6 +8,14 @@ ClapTrap::ClapTrap(string name) {
     std::cout << "ClapTrap " << this->name << " is created" << std::endl;
 }
 
+ClapTrap::ClapTrap() {
+    this->name = "Default";
+    this->hitPoints = 10;
+    this->energyPoint = 10;
+    this->attackDamage = 0;
+    std::cout << "Default ClapTrap " << this->name << " is created" << std::endl;
+}
+
 ClapTrap::~ClapTrap() {
     std::cout << "ClapTrap " << this->name << " is destroyed" << std::endl;
 }
