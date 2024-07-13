@@ -2,6 +2,7 @@ NAME = FragTrap
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+INC = ScavTrap.hpp ClapTrap.hpp FragTrap.hpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
@@ -9,7 +10,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp
+%.o: %.cpp $(INC)
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:

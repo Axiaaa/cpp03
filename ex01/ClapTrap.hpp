@@ -12,9 +12,9 @@ class ClapTrap {
     private :
     
         string name;
-        unsigned int hitPoints;
-        unsigned int energyPoint;
-        unsigned int attackDamage;
+        int hitPoints;
+        int energyPoint;
+        int attackDamage;
 
     public :
         ClapTrap();

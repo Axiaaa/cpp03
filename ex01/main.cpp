@@ -9,7 +9,7 @@ int main() {
     clapTrap.attack("Enemy");
     scavTrap.attack("Enemy");
 
-    clapTrap.takeDamage(10);
+    clapTrap.takeDamage(2);
     scavTrap.takeDamage(10);
 
     clapTrap.beRepaired(5);
@@ -17,18 +17,16 @@ int main() {
 
     scavTrap.guardGate();
 
-    while (scavTrap.getHitPoints() > 0) {
+    std::cout << scavTrap.getHitPoints() << "\n";
+    while (scavTrap.getHitPoints() > 10) {
         scavTrap.takeDamage(1);
     }
-
     while (scavTrap.getEnergyPoint() > 0) {
-        scavTrap.attack("Enemy");
+        scavTrap.attack("test");
     }
-
-    while (clapTrap.getHitPoints() > 0) {
+    while (clapTrap.getHitPoints() > 10) {
         clapTrap.takeDamage(1);
     }
-
     while (clapTrap.getEnergyPoint() > 0) {
         clapTrap.attack("Enemy");
     }
